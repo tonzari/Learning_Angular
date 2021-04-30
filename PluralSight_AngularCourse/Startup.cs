@@ -20,28 +20,10 @@ namespace PluralSight_AngularCourse
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
-        {   /*
-            if (env.IsDevelopment())
-            {
-                app.UseDeveloperExceptionPage();
-            }*/
-
-            /*            app.UseRouting();
-
-                        app.UseEndpoints(endpoints =>
-                        {
-                            endpoints.MapGet("/", async context => // this "/" sends a request to the root of the web server
-                            {
-                                await context.Response.WriteAsync("Hello World!");
-                            });
-                        });*/
-
-            // simply, you could just run this instead of the code above.
-            // This doesn't care at all what you through in the URL... this is simply just responding to ANY request.
-            app.Run(async context =>
-            {
-                await context.Response.WriteAsync("HellooOOooo!");
-            });
+        {
+            // middleware
+            app.UseDefaultFiles(); // this will find your index.html file (but DOES NOT serve it)
+            app.UseStaticFiles(); // this doesn't find anything, but gives you the ability to serve the static site
         }
     }
 }
