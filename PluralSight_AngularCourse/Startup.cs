@@ -40,7 +40,7 @@ namespace PluralSight_AngularCourse
             // This doesn't care at all what you through in the URL... this is simply just responding to ANY request.
             app.Run(async context =>
             {
-                await context.Response.WriteAsync("HelloooOOOoOOooo!");
+                await context.Response.WriteAsync("HellooOOooo!");
             });
         }
     }
