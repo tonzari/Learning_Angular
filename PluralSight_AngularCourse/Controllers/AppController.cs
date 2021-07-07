@@ -41,7 +41,7 @@ namespace PluralSight_AngularCourse.Controllers
             if (ModelState.IsValid)
             {
                 // send the email
-                _mailService.SendMessage("antoniomanzari@gmail.com", model.Subject, model.Message);
+                _mailService.SendMessage("EMAIL@EMAIL.com", model.Subject, model.Message);
                 ViewBag.UserMessage = "Mail Sent";
                 ModelState.Clear();
             }
